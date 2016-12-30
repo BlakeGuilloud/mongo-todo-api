@@ -47,9 +47,9 @@ export async function updateTodo(id, data) {
   let todo;
 
   try {
-    await User.findByIdAndUpdate(id, data);
+    await Todo.findByIdAndUpdate(id, data);
 
-    user = await User.findById(id);
+    todo = await Todo.findById(id);
   } catch (err) {
     return Promise.reject(err);
   }
