@@ -12,8 +12,8 @@ import {
 const router = express.Router();
 
 router.delete('/:id', deleteTodo);
-router.get('/', getTodos);
 router.get('/:id', getTodo);
+router.get('/', getTodos);
 router.patch('/:id', patchTodo);
 router.post('/', postTodo);
 router.put('/:id', putTodo);
