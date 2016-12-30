@@ -6,7 +6,7 @@ import {
   fetchTodos,
   updateTodo,
   createTodo,
-  replaceTodo,
+  // replaceTodo,
 } from '../services/todo.service';
 
 export function deleteTodo(req, res) {
@@ -44,9 +44,9 @@ export function postTodo(req, res) {
     .catch(SendError(res));
 }
 
-export function putTodo(req, res) {
-  return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(replaceTodo, 'params.id', 'data'))
-    .then(SendSuccess(res))
-    .catch(SendError(res));
-}
+// export function putTodo(req, res) {
+//   return Promise.resolve(Shuttle.liftRequest(req))
+//     .then(Shuttle.liftFunction(replaceTodo, 'params.id', 'data'))
+//     .then(SendSuccess(res))
+//     .catch(SendError(res));
+// }
