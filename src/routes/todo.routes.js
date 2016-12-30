@@ -7,7 +7,7 @@ import {
   patchTodo,
   postTodo,
   // putTodo
-} from '../controller/todo.controller';
+} from '../controllers/todo.controller';
 
 const router = express.Router();
 
