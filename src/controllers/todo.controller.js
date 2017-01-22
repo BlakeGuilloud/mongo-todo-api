@@ -1,5 +1,5 @@
 import { SendSuccess, SendError } from 'tael';
-import Shuttle from './shuttle';
+import Fluyt from 'fluyt';
 import {
   destroyTodo,
   fetchTodo,
@@ -10,43 +10,43 @@ import {
 } from '../services/todo.service';
 
 export function deleteTodo(req, res) {
-  return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(destroyTodo, 'params.id'))
+  return Promise.resolve(Fluyt.liftRequest(req))
+    .then(Fluyt.liftFunction(destroyTodo, 'params.id'))
     .then(SendSuccess(res))
     .catch(SendError(res));
 }
 
 export function getTodo(req, res) {
-  return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(fetchTodo, 'params.id'))
+  return Promise.resolve(Fluyt.liftRequest(req))
+    .then(Fluyt.liftFunction(fetchTodo, 'params.id'))
     .then(SendSuccess(res))
     .catch(SendError(res));
 }
 
 export function getTodos(req, res) {
-  return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(fetchTodos))
+  return Promise.resolve(Fluyt.liftRequest(req))
+    .then(Fluyt.liftFunction(fetchTodos))
     .then(SendSuccess(res))
     .catch(SendError(res));
 }
 
 export function patchTodo(req, res) {
-  return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(updateTodo, 'params.id', 'data'))
+  return Promise.resolve(Fluyt.liftRequest(req))
+    .then(Fluyt.liftFunction(updateTodo, 'params.id', 'data'))
     .then(SendSuccess(res))
     .catch(SendError(res));
 }
 
 export function postTodo(req, res) {
-  return Promise.resolve(Shuttle.liftRequest(req))
-    .then(Shuttle.liftFunction(createTodo, 'data'))
+  return Promise.resolve(Fluyt.liftRequest(req))
+    .then(Fluyt.liftFunction(createTodo, 'data'))
     .then(SendSuccess(res))
     .catch(SendError(res));
 }
 
 // export function putTodo(req, res) {
-//   return Promise.resolve(Shuttle.liftRequest(req))
-//     .then(Shuttle.liftFunction(replaceTodo, 'params.id', 'data'))
+//   return Promise.resolve(Fluyt.liftRequest(req))
+//     .then(Fluyt.liftFunction(replaceTodo, 'params.id', 'data'))
 //     .then(SendSuccess(res))
 //     .catch(SendError(res));
 // }

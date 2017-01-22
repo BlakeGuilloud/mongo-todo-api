@@ -16,6 +16,7 @@
     "babel-preset-stage-2": "^6.18.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "fluyt": "^1.0.1",
     "mongoose": "^4.7.5",
     "tael": "^1.0.5"
   },
