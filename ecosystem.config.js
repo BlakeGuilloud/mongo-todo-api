@@ -10,7 +10,7 @@ module.exports = {
       key: '~/Desktop/keys/Ubuntu-Key-Pair.pem',
       ref: 'origin/master',
       repo: 'git@github.com:BlakeGuilloud/mongo-todo-api.git',
-      path: '/home/ubuntu/mongo-todo-api',
+      path: '/home/ubuntu',
       'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
