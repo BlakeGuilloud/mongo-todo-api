@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "restart": "pm2 startOrRestart ecosystem.config.js",
-    "deploy": "pm2 deploy ecosystem.config.js production"
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "setup": "pm2 deploy ecosystem.config.js production setup"
   },
   "dependencies": {
     "babel-cli": "^6.18.0",
