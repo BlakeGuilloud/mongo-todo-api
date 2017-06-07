@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const todoRoutes = require('./lib/routes/todo.routes');
 
-const db = process.env.MONGODB_URI || 'mongodb://localhost/testing';
+const db = process.env.MONGODB_URI || 'mongodb://fbguillo:574Rutledge.@ds139791.mlab.com:39791/todo';
 const port = process.env.PORT || 8100;
 
 mongoose.connect(db);
