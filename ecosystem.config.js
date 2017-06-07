@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: 'mongo-todo-api',
+    name: 'mongo-todo-api-2',
     script: './index.js'
   }],
   deploy: {
